@@ -26,11 +26,15 @@ def vowel_count(text: str) -> int:
 
 # Part 2: short_lists
 def short_lists(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
+    # This function computes a new list of lists of the passed in list of lists that only contain two integers
+    # The items parameter takes in a list of list of its specifically
+    # The function returns a list of lists of the passed in list of lists that only contain two integers
     # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 2: implement short_lists")
+    new_list = []
+    for list in items:
+        if len(list) == 2:
+            new_list.append(list)
+    return new_list
 
 
 # Part 3: ascending_pairs
