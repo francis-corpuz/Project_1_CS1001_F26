@@ -16,17 +16,16 @@ import unittest
 import data
 import hw1
 
+from hw1 import vowel_count #import vowel_count function
 
 class TestHomework1(unittest.TestCase):
 
     # Part 1: vowel_count
     def test_vowel_count_case_insensitive(self):
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.fail("TODO: write the first unit test for vowel_count")
+        self.assertEqual(0, vowel_count("cmptrscnc")) #lower case without vowels
 
     def test_vowel_count_empty_string(self):
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.fail("TODO: write the second unit test for vowel_count")
+        self.assertEqual(0, vowel_count("")) #empty string
 
     # Part 2: short_lists
     def test_short_lists_mixed_lengths(self):

@@ -12,11 +12,16 @@ import data
 
 # Part 1: vowel_count
 def vowel_count(text: str) -> int:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
+    #This function computes the amount of vowels in a string
+    #The text parameter takes in a string
+    #The function returns an integer that represents the count of vowels
     # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 1: implement vowel_count")
+    lower_text = text.lower()
+    count = 0
+    for char in lower_text:
+        if char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u':
+            count += 1
+    return count
 
 
 # Part 2: short_lists
