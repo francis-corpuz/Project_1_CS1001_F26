@@ -29,11 +29,11 @@ class TestHomework1(unittest.TestCase):
 
     # Part 2: short_lists
     def test_short_lists_mixed_lengths(self):
-        self.assertEqual([[6,5], [3,1], [0,9]], short_lists([[2,3,5], [6,5], [0,2,2], [3,1], [1,2,3,4], [0,9]]))
+        self.assertEqual([[6,5], [3,1], [0,9]], short_lists([[2,3,5], [6,5], [0,2,2], [3,1], [1,2,3,4], [0,9]])) #list of lists of ints of varying lengths
 
     def test_short_lists_no_matching_lengths(self):
-        # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
-        self.fail("TODO: write the second unit test for short_lists")
+        self.assertEqual([], short_lists([[2,3,5], [6,5,2], [0,2,2], [3,1,9], [1,2,3,4], [0,9,2,30]])) #list of no matching lengths
+        
 
     # Part 3: ascending_pairs
     def test_ascending_pairs_reversed_pairs(self):
