@@ -16,7 +16,7 @@ import unittest
 import data
 import hw1
 
-from hw1 import vowel_count, short_lists, ascending_pairs, add_prices #import vowel_count, short_lists, ascending pairs, add prices functions
+from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area #import vowel_count, short_lists, ascending pairs, add prices functions
 
 class TestHomework1(unittest.TestCase):
 
@@ -51,12 +51,10 @@ class TestHomework1(unittest.TestCase):
 
     # Part 5: rectangle_area
     def test_rectangle_area_standard_rectangle(self):
-        # TODO: Arrange inputs, call hw1.rectangle_area, and assert the result.
-        self.fail("TODO: write the first unit test for rectangle_area")
+        self.assertEqual(120, rectangle_area(data.Rectangle(data.Point(20,16), data.Point(10,4)))) #area of rectangle
 
     def test_rectangle_area_negative_coordinates(self):
-        # TODO: Arrange inputs, call hw1.rectangle_area, and assert the result.
-        self.fail("TODO: write the second unit test for rectangle_area")
+        self.assertEqual(20, rectangle_area(data.Rectangle(data.Point(-2,7), data.Point(2,2)))) # area of rectangle with negative coordinates
 
     # Part 6: books_by_author
     def test_books_by_author_matching_authors(self):

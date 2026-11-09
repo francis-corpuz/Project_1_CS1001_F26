@@ -46,8 +46,8 @@ def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
     for item in items:
         if len(item) != 2:
             new_list.append(item)
-        elif len(item) == 2 and item[1] > item[0]:
-            new_list.append([item[0], item[1]])
+        elif len(item) == 2 and item[0] > item[1]:
+            new_list.append([item[1], item[0]])
         else:
             new_list.append(item)
     return new_list
@@ -66,11 +66,12 @@ def add_prices(first: data.Price, second: data.Price) -> data.Price:
 
 # Part 5: rectangle_area
 def rectangle_area(rectangle: data.Rectangle) -> float:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 5: implement rectangle_area")
+    #This function computes the area if a rectangle object based on corner points
+    #rectangle is a rectangle object with two points, top_left and bottom_right
+    #The function returns the area of the rectangle
+    base_length = abs((rectangle.top_left.x - rectangle.bottom_right.x))
+    height_length = abs((rectangle.top_left.y - rectangle.bottom_right.y))
+    return base_length*height_length
 
 
 # Part 6: books_by_author
