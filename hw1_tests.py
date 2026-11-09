@@ -16,7 +16,7 @@ import unittest
 import data
 import hw1
 import math
-from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area, books_by_author, circle_bound #import vowel_count, short_lists, ascending pairs, rectangle area, books by author, add prices functions
+from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area, books_by_author, circle_bound, below_pay_average #import vowel_count, short_lists, ascending pairs, rectangle area, books by author, add prices functions
 
 class TestHomework1(unittest.TestCase):
 
@@ -73,12 +73,11 @@ class TestHomework1(unittest.TestCase):
 
     # Part 8: below_pay_average
     def test_below_pay_average_different_pay_rates(self):
-        # TODO: Arrange inputs, call hw1.below_pay_average, and assert the result.
-        self.fail("TODO: write the first unit test for below_pay_average")
+        self.assertEqual(["Addam", "Bri", "Chun"], below_pay_average([data.Employee("Addam", 3), data.Employee("Bri", 5), data.Employee("Chun", 1), data.Employee("Deku", 10000)])) #below avg pay rates
 
     def test_below_pay_average_empty_list(self):
         # TODO: Arrange inputs, call hw1.below_pay_average, and assert the result.
-        self.fail("TODO: write the second unit test for below_pay_average")
+        self.assertEqual([], below_pay_average([])) #empty list
 
 
 if __name__ == '__main__':
