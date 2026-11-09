@@ -16,7 +16,7 @@ import unittest
 import data
 import hw1
 
-from hw1 import vowel_count, short_lists, ascending_pairs #import vowel_count, short_lists, ascending pairs functions
+from hw1 import vowel_count, short_lists, ascending_pairs, add_prices #import vowel_count, short_lists, ascending pairs, add prices functions
 
 class TestHomework1(unittest.TestCase):
 
@@ -44,12 +44,10 @@ class TestHomework1(unittest.TestCase):
 
     # Part 4: add_prices
     def test_add_prices_no_cents_carry(self):
-        # TODO: Arrange inputs, call hw1.add_prices, and assert the result.
-        self.fail("TODO: write the first unit test for add_prices")
+        self.assertEqual(data.Price(5, 23), add_prices(data.Price(4, 10), data.Price(1,13))) #no cents carry
 
     def test_add_prices_with_cents_carry(self):
-        # TODO: Arrange inputs, call hw1.add_prices, and assert the result.
-        self.fail("TODO: write the second unit test for add_prices")
+        self.assertEqual(data.Price(5, 23), add_prices(data.Price(4, 0), data.Price(0,123))) #cents carried
 
     # Part 5: rectangle_area
     def test_rectangle_area_standard_rectangle(self):
