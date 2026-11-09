@@ -15,8 +15,8 @@ import unittest
 
 import data
 import hw1
-
-from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area, books_by_author #import vowel_count, short_lists, ascending pairs, rectangle area, books by author, add prices functions
+import math
+from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area, books_by_author, circle_bound #import vowel_count, short_lists, ascending pairs, rectangle area, books by author, add prices functions
 
 class TestHomework1(unittest.TestCase):
 
@@ -65,12 +65,11 @@ class TestHomework1(unittest.TestCase):
 
     # Part 7: circle_bound
     def test_circle_bound_square(self):
-        # TODO: Arrange inputs, call hw1.circle_bound, and assert the result.
-        self.fail("TODO: write the first unit test for circle_bound")
+        self.assertEqual((data.Circle(data.Point(4,3), 5)), circle_bound(data.Rectangle(data.Point(0,0), data.Point(8,6)))) #test circle bounds
 
     def test_circle_bound_non_square_rectangle(self):
-        # TODO: Arrange inputs, call hw1.circle_bound, and assert the result.
-        self.fail("TODO: write the second unit test for circle_bound")
+                self.assertNotEqual((data.Circle(data.Point(4,3), 6)), circle_bound(data.Rectangle(data.Point(0,50), data.Point(2,6)))) #non valid bounds
+
 
     # Part 8: below_pay_average
     def test_below_pay_average_different_pay_rates(self):
