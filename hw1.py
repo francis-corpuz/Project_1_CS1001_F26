@@ -39,12 +39,19 @@ def short_lists(items: list[list[int]]) -> list[list[int]]:
 
 # Part 3: ascending_pairs
 def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
-    # TODO: Purpose: describe what this function computes.
-    # TODO: Input(s): explain each parameter.
-    # TODO: Output: explain what the function returns.
-    # TODO: Replace this exception with your implementation.
-    raise NotImplementedError("Part 3: implement ascending_pairs")
-
+    #This function will return a new list of lists of ints, keeping the same order but have lists of length two have a list of ints in descending order
+    #Items is the list of lists of ints
+    #The function returns a list of lists of ints based off the computation
+    new_list = []
+    for item in items:
+        if len(item) != 2:
+            new_list.append(item)
+        elif len(item) == 2 and item[1] > item[0]:
+            new_list.append([item[0], item[1]])
+        else:
+            new_list.append(item)
+    return new_list
+                    
 
 # Part 4: add_prices
 def add_prices(first: data.Price, second: data.Price) -> data.Price:

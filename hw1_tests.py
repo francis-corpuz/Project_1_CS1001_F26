@@ -16,7 +16,7 @@ import unittest
 import data
 import hw1
 
-from hw1 import vowel_count, short_lists #import vowel_count, short_lists functions
+from hw1 import vowel_count, short_lists, ascending_pairs #import vowel_count, short_lists, ascending pairs functions
 
 class TestHomework1(unittest.TestCase):
 
@@ -37,12 +37,10 @@ class TestHomework1(unittest.TestCase):
 
     # Part 3: ascending_pairs
     def test_ascending_pairs_reversed_pairs(self):
-        # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
-        self.fail("TODO: write the first unit test for ascending_pairs")
+        self.assertEqual([[2,3], [4,5]], ascending_pairs([[3,2],[5,4]])) #two reversed pairs
 
     def test_ascending_pairs_other_lengths_unchanged(self):
-        # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
-        self.fail("TODO: write the second unit test for ascending_pairs")
+        self.assertEqual([[2,3],[4,5]], ascending_pairs([[2,3], [4,5]])) #unchanged
 
     # Part 4: add_prices
     def test_add_prices_no_cents_carry(self):
