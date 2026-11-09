@@ -16,7 +16,7 @@ import unittest
 import data
 import hw1
 
-from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area #import vowel_count, short_lists, ascending pairs, add prices functions
+from hw1 import vowel_count, short_lists, ascending_pairs, add_prices, rectangle_area, books_by_author #import vowel_count, short_lists, ascending pairs, rectangle area, books by author, add prices functions
 
 class TestHomework1(unittest.TestCase):
 
@@ -58,12 +58,10 @@ class TestHomework1(unittest.TestCase):
 
     # Part 6: books_by_author
     def test_books_by_author_matching_authors(self):
-        # TODO: Arrange inputs, call hw1.books_by_author, and assert the result.
-        self.fail("TODO: write the first unit test for books_by_author")
+        self.assertEqual(["Lord of the Rings"], books_by_author("Tolkien", [data.Book("Tolkien", "Lord of the Rings"), data.Book("Osborne", "Magic Tree House")])) #matching author
 
     def test_books_by_author_no_matches(self):
-        # TODO: Arrange inputs, call hw1.books_by_author, and assert the result.
-        self.fail("TODO: write the second unit test for books_by_author")
+        self.assertEqual([], books_by_author("Nottolkien", [data.Book("Tolkien", "Lord of the Rings"), data.Book("Osborne", "Magic Tree House")])) #no matching author
 
     # Part 7: circle_bound
     def test_circle_bound_square(self):
